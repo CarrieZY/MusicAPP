@@ -22,6 +22,7 @@ export default {
     height:px2rem(40);
     line-height: px2rem(40);
     @include border-1px(#ccc);
+    background:#fff;
     >a{
         text-decoration: none;
         color:#666;

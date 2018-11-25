@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import 'common/css/reset.css'
+import 'common/css/base.scss'
 import recommend from 'components/recommend/recommend'
 import rank from 'components/rank/rank'
 import singer from 'components/singer/singer'
