@@ -1,8 +1,8 @@
 <template>
     <div class="tab">
         <router-link tag="a" to="/recommend">推荐</router-link>
-        <router-link tag="a" to="/rank">排行</router-link>
         <router-link tag="a" to="/singer">歌手</router-link>
+        <router-link tag="a" to="/rank">排行</router-link>
         <router-link tag="a" to="/search">搜索</router-link>
     </div>
 </template>

@@ -92,8 +92,8 @@ export default {
                 text-overflow: ellipsis;
                 white-space: nowrap;
               }
-              span{
-                  font-size: px2rem(12);
+              >span{
+                  font-size: px2rem(10);
               }   
            }
        }    
