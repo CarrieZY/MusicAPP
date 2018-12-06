@@ -1,8 +1,11 @@
 <template>
     <div class="singer">
-        <listview :data="singers" @select="selectSinger"></listview>
-        <quickentry :data="singers"></quickentry>
+        <listview :data="singers" 
+        @select="selectSinger"></listview>
         <router-view></router-view>
+        <div v-show="!singers.length">
+            <loading></loading>
+        </div>
     </div>
 </template>
 
@@ -11,14 +14,14 @@ import { getSongList } from 'api/singer'
 import {ERR_OK} from 'api/config'
 import Singer from 'common/js/singer'
 import listview from './listview'
-import quickentry from './quickentry'
-import { mapGetters } from 'vuex'
+import loading from './loading/loading'
+import { mapMutations } from 'vuex'
 const HOT_SINGER_LEN = 10
 const HOT_NAME = '热门'
 export default {
     components:{
         listview,
-        quickentry
+        loading
     },
     data(){
         return {
@@ -85,7 +88,7 @@ export default {
             })
             return hot.concat(ret)
         },
-        ...mapGetters({
+        ...mapMutations({
             setSinger:'SET_SINGER'
         })
 
